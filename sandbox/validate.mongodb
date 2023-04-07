@@ -1,0 +1,42 @@
+//use('fm_mongo');
+// db.createCollection("movies", {
+//   validator: { 
+//     $jsonSchema: {
+//       bsonType: "object",
+//       required: ["title", "director", "moreInfo"],
+//       properties: {
+//         title: {
+//           bsonType: "string",
+//           description: "must be string"
+//         },
+//         director: {
+//           bsonType: "string"
+//         },
+//         moreInfo: {
+//           bsonType: "object",
+//           required: ["genre", "year"],
+//           properties:{
+//             genre:{
+//               enum: ["comedy", "drama", "horror"],
+//               description: "one of: comedy, drama, horror"
+//             },
+//             year:{
+//               bsonType: "int",
+//               minimum: 1900,
+//               maximum: 3027
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// });
+// db.movies.insertMany([{
+//   title: "It",
+//   director: "Tarantino",
+//   moreInfo:{
+//     genre: "horror",
+//     year: 2000
+//   }
+// }]);
+
