@@ -1,13 +1,17 @@
-//use('fm_mongo');
+use('fm_mongo');
+//db.movies.drop();
 // db.createCollection("movies", {
 //   validator: { 
 //     $jsonSchema: {
 //       bsonType: "object",
-//       required: ["title", "director", "moreInfo"],
+//       required: ["title", "director", "moreInfo", "studioId"],
 //       properties: {
 //         title: {
 //           bsonType: "string",
 //           description: "must be string"
+//         },
+//         studioId:{
+//           bsonType: "objectId"
 //         },
 //         director: {
 //           bsonType: "string"
@@ -31,12 +35,66 @@
 //     }
 //   }
 // });
-// db.movies.insertMany([{
-//   title: "It",
-//   director: "Tarantino",
-//   moreInfo:{
-//     genre: "horror",
-//     year: 2000
-//   }
-// }]);
 
+db.movies.insertMany([
+  {
+    title: "Monsters 2",
+    studioId: new ObjectId('6433c4f5fa0f008ea77fd1eb'),
+    director: "Tarantino",
+    moreInfo:{
+      genre: "horror",
+      year: 2000
+    }
+  },
+  {
+    title: "Monsters 3",
+    studioId: new ObjectId('6433c4f5fa0f008ea77fd1eb'),
+    director: "Tarantino",
+    moreInfo:{
+      genre: "horror",
+      year: 2000
+    }
+  },
+  {
+    title: "Avengers 1",
+    studioId: new ObjectId('6433c4f5fa0f008ea77fd1ed'),
+    director: "Tarantino",
+    moreInfo:{
+      genre: "comedy",
+      year: 2000
+    }
+  },
+  {
+    title: "Avengers 2",
+    studioId: new ObjectId('6433c4f5fa0f008ea77fd1ed'),
+    director: "Tarantino",
+    moreInfo:{
+      genre: "comedy",
+      year: 2000
+    }
+  },
+  {
+    title: "Avengers finally",
+    studioId: new ObjectId('6433c4f5fa0f008ea77fd1ed'),
+    director: "Tarantino",
+    moreInfo:{
+      genre: "comedy",
+      year: 2000
+    }
+  },
+  {
+    title: "Qwerty",
+    studioId: new ObjectId('6433c4f5fa0f008ea77fd1ec'),
+    director: "Tarantino",
+    moreInfo:{
+      genre: "drama",
+      year: 2020
+    }
+  }
+]);
+
+
+
+//6433c4f5fa0f008ea77fd1eb
+//6433c4f5fa0f008ea77fd1ec
+//6433c4f5fa0f008ea77fd1ed

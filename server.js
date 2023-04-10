@@ -57,6 +57,17 @@ app.get("/", async (req, res, next) => {
     next(error);
   }
 });
+app.get("/:taskId", async (req, res, next) => {
+  try {
+    const {
+      params: { taskId },
+    } = req;
+    const task = await Task.findById(taskId);
+    res.status(200).send({ data: task });
+  } catch (error) {
+    next(error);
+  }
+});
 app.post("/", async (req, res, next) => {
   try {
     const { body } = req;
