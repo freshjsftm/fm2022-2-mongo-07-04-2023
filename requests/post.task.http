@@ -2,10 +2,10 @@ POST http://localhost:3000/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "content": "3 task",
+  "content": "Four task",
   "owner":{
-    "name":"Brad",
-    "age":63,
-    "email":"qwe@gmail.com"
+    "name":"Tom",
+    "age":55,
+    "email":"eqw@gmail.com"
   }
 }

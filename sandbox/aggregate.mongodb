@@ -31,15 +31,30 @@ use('fm_mongo');
 //   { $unset: "studio._id" }
 // ])
 
-db.movies.aggregate([
-  {
-  $group:
-    {
-      _id: '$studioId', // Group key
-      amount: { $sum : 1 },
-    }
- }
-])
+// db.movies.aggregate([
+//   {
+//   $group:
+//     {
+//       _id: '$studioId', // Group key
+//       amount: { $sum : 1 },
+//     }
+//  }
+// ])
+
+// db.movies.aggregate([
+//   {
+//     $sort:{title:-1}
+//   },
+//   {
+//     $skip: 2
+//   },
+//   {
+//     $limit: 2
+//   }
+// ])
+
+// db.movies.find().limit(2).skip(2)
+
 
 //6433c4f5fa0f008ea77fd1eb
 //6433c4f5fa0f008ea77fd1ec

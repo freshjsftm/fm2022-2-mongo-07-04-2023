@@ -1,0 +1,14 @@
+use("fm_mongoose");
+
+db.comments.find()
+
+// db.comments.aggregate([
+//   {
+//     $lookup: {
+//       from: 'Task',
+//       localField: "taskId",
+//       foreignField: "_id",
+//       as: 'arrTasks'
+//     }
+//   }
+// ]);
