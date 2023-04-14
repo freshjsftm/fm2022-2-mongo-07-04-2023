@@ -1,8 +1,8 @@
-POST http://localhost:3000/ HTTP/1.1
+POST http://172.22.0.3:3000/tasks/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "content": "Four task",
+  "content": "Qwerrty task",
   "owner":{
     "name":"Tom",
     "age":55,

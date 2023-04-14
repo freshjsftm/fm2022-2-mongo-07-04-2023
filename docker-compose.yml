@@ -1,0 +1,25 @@
+version: '3.0'
+services:
+  fm_mongo_server:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:  
+      - "3005:3000"
+    environment: 
+      PORT: 3000
+    volumes:
+      - ./:/server:ro
+    depends_on:
+      - fm_mongo
+    networks:
+      - db_bridge    
+  fm_mongo:
+    image: mongo:6.0.5
+    restart: always
+    networks:
+      - db_bridge 
+    volumes:
+      - /home/olena/Documents/fm_backup_mongo:/data/db
+networks:
+  db_bridge:      
